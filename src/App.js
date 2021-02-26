@@ -29,7 +29,7 @@ function App() {
   };
 
   const handleCreate = (song) => {
-    axios.post(url + "/tunatunr", song).then(() => {
+    axios.post(url + "/songs", song).then(() => {
       getSongs();
     });
   };
