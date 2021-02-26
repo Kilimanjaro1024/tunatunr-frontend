@@ -7,7 +7,7 @@ import Form from "./components/Form";
 
 function App() {
   // Url variable
-  const url = "https://tunatunr.herokuapp.com";
+  const url = "https://tunatunr-backend.herokuapp.com";
 
   // States
   const [songs, setSongs] = React.useState([]);
