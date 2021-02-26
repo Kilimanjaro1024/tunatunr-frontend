@@ -2,6 +2,7 @@ import React from "react";
 
 const Display = (props) => {
   console.log("Display Props", props);
+  console.log(props.favoritedSong)
   return (
     <div className="display-container">
       <div className="header-container">
@@ -46,7 +47,28 @@ const Display = (props) => {
             </div>
           );
         })}
-        <div className="favorite-container"></div>
+
+        <div className="favorite-container">
+          Favorite Songs
+          {props.favoritedSong.map((song) => {
+            return (
+              <div className="song-container">
+                <div className="song-title">
+                  <strong>{song.name}</strong>
+                </div>
+                <div className="artist">
+                  <strong>{song.artist}</strong>
+                </div>
+                <div className="song-album">
+                  <strong>{song.album}</strong>
+                </div>
+                <div className="song-time">
+                  <strong>{song.time}</strong>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

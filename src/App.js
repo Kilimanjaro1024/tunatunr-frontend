@@ -41,7 +41,10 @@ function App() {
   };
 
   const handleFavorite = (song) => {
-    setFavoritedSong({ ...favoritedSong }, song);
+    if(!favoritedSong.includes(song)){
+      setFavoritedSong([...favoritedSong, song]);
+    }
+    console.log(favoritedSong)
   };
 
   React.useEffect(() => {
@@ -54,6 +57,7 @@ function App() {
         songs={songs}
         handleDelete={handleDelete}
         handleFavorite={handleFavorite}
+        favoritedSong={favoritedSong}
       />
       <Form
         song={emptySong}
