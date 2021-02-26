@@ -23,7 +23,7 @@ function App() {
 
   // Function to get list of songs
   const getSongs = () => {
-    axios.get(url + "/tunatunr").then((response) => {
+    axios.get(url + "/songs").then((response) => {
       setSongs(response.data);
     });
   };
