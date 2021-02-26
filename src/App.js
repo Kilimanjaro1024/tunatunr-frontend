@@ -35,7 +35,7 @@ function App() {
   };
 
   const handleDelete = (song) => {
-    axios.delete(url + "/songs/id/" + song._id).then(() => {
+    axios.delete(url + "/songs/id/" + song.id).then(() => {
       getSongs();
     });
   };
